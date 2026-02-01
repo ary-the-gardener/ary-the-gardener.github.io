@@ -1,10 +1,9 @@
 *{
-    padding: 10;
-    margin: 10;
+    padding: 5px;
+    margin: 5px;
 }
 
 body {
-    text-indent: 40px;
     background-image: url('images/web-background_night_sky.gif');
     background-attachment: fixed;
     color: whitesmoke;
@@ -24,6 +23,8 @@ h3{
 }
 
 a{
+    margin: 0;  
+    padding: 0;
     text-decoration: none;
     color: whitesmoke;
 }
@@ -41,7 +42,6 @@ a:hover{
 .container {
     display: flex;
     flex-direction: column;
-    padding: 10px;
     gap: 10px
 }
 
@@ -51,7 +51,6 @@ a:hover{
     justify-content: center;
     gap: 10px;
     border: 2px solid whitesmoke;
-    padding: 10px;
 }
 
 .menu-btn {
@@ -98,14 +97,25 @@ a:hover{
     gap: 10px;   
 }
 
-.box{ padding-bottom: 20px; box-sizing: border-box; border: 2px solid whitesmoke; }
-.left{ flex: 1; }
-.middle{ flex: 4; }
-.right{ flex: 1; }
+.box{ display: flex; width:100%; box-sizing: border-box; border: 2px solid whitesmoke; }
+.left{ flex: 1; justify-content: center; }
+.middle{ flex: 4; justify-content: center; flex-direction: column; gap: 0px}
+.right{ flex: 1; justify-content: center; flex-direction: column; gap: 0px}
 
-.nested-col {
-  flex: 1;                 /* equal width for 4 columns */
-  padding: 20px;
+.nested-box{ display: flex;  box-sizing: border-box; border: 1px solid whitesmoke;}
+.nested-col { /* for tables */
+  flex: 1; 
+  flex-direction: row;
+  justify-content: center;
   text-align: center;
-  border: 1px solid whitesmoke;  /* optional outline for each nested column */
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid whitesmoke;
+}
+
+.nested-row { /* for tables */
+  flex: 1; 
+  flex-direction: column;
+  text-align: center;
+  align-items: stretch;
 }
