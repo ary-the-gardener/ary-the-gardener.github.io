@@ -102,3 +102,10 @@ a:hover{
 .left{ flex: 1; }
 .middle{ flex: 4; }
 .right{ flex: 1; }
+
+.nested-col {
+  flex: 1;                 /* equal width for 4 columns */
+  padding: 20px;
+  text-align: center;
+  border: 1px solid whitesmoke;  /* optional outline for each nested column */
+}
